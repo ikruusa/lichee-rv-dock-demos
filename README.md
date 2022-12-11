@@ -1,6 +1,8 @@
 # lichee_dock_demos
 Demos about how to use onboard resources on Lichee dock (also called Lichee RV dock)
 
+If you are in hurry: go and grab tiny image (download size is less than 30MB!) from https://github.com/ikruusa/lichee_dock_images and boot up your board. You will find those demos in `/root/demos`
+
 To interact with or use certain resource you have to consider:
 * how the circuit is wired up
 * what linux kernel drivers are available
