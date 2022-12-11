@@ -1,4 +1,4 @@
-Lichee dock has on-board electret microphone circuit and 3W audio amplifier (with connector for a speaker).
+Lichee dock has on-board electret microphone circuit and 3W mono audio amplifier (with connector for a speaker).
 Audio amplifier circuit in use is NS4150 by ShenZhen Nsiway Technology Co., Ltd. This is a filterless 3W@4 Ohm mono class D audio amplifier.
 Audio output from D1 SoC is taken from headphone amplifier.
 
