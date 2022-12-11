@@ -1,5 +1,5 @@
 # lichee_dock_demos
-Demos about how to use onboard resources on Lichee dock
+Demos about how to use onboard resources on Lichee dock (also called Lichee RV dock)
 
 To interact with or use certain resource you have to consider:
 * how the circuit is wired up
