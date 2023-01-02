@@ -12,7 +12,7 @@ As of december 2022 (kernel version 6.1) there is no full official support for A
 
 Luckily the "official" work-in-progress linux kernel development is accessible via Samuel Holland's linux repo at https://github.com/smaeul/linux
 
-It seems that it will take many more kernel release cycles before we gonna get full support for D1 SOC and Lichee dock. Maybe kernel versions after 6.3 will bring some good news.
+It seems that it will take many more kernel release cycles before we gonna get full support for D1 SOC and Lichee RV dock. Maybe kernel versions after 6.3 will bring some good news.
 
 As of WIP `kernel version 6.1-rc3` the Lichee dock is supported as following
 * video
