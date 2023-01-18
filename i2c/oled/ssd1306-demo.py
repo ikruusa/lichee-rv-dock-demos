@@ -27,11 +27,13 @@
 import smbus
 
 #
+# This program controls I2C connected OLED display on Lichee RV dock
+#
 # Requirements:
 # - SSD1306 OLED must be connected to the header pins PB0 (SCL) and PB1 (SDA)
 # - in my system only /dev/i2c-0 was presented (its related to the HDMI) so
 #   kernel's devictree missed the needed i2c device
-# - i2c2 device has to be enabled in linux kernel devicetree
+# - i2c2 device has to be enabled in linux kernel devicetree (I ended up compiling new u-boot)
 # - at the end i2c2 device was presented as /dev/i2c-1, hence the i2c_bus=1:
 #     disp = SSD1306_128_64(i2c_bus=1)
 #
