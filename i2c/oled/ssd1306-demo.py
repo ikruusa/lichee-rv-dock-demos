@@ -25,6 +25,8 @@
 #
 
 import smbus
+import os
+import sys
 
 #
 # This program controls I2C connected OLED display on Lichee RV dock
@@ -190,8 +192,17 @@ class SSD1306_128_64(SSD1306Base):
         self.command(SSD1306_DISPLAYALLON_RESUME)           # 0xA4
         self.command(SSD1306_NORMALDISPLAY)                 # 0xA6
 
+# This demo requires i2c2 to be registered as /dev/i2c-1
+i2c_device = 1
+i2c_device_str = "/dev/i2c-" + str(i2c_device)
 
-disp = SSD1306_128_64(i2c_bus=1)
+if os.path.exists(i2c_device_str) == False:
+    reason_str = "Required I2C device at " + i2c_device_str + " does not exist!\n"
+    check_str = "Check what I2C buses are available and use correct one: 'ls -l /dev/i2c*'\n"
+    help_str = "If only /dev/i2c-0 exists then you may need to update devictree and recompile OpenSBI or linux kernel."
+    sys.exit(reason_str + check_str + help_str)
+
+disp = SSD1306_128_64(i2c_bus=i2c_device)
 disp.begin()
 disp.clear()
 disp.display()
